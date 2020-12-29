@@ -20,6 +20,7 @@ const Header = () => {
     <Container showMenu={isShowMenu} style={animationContainer}>
       <Button
         width={'60px'}
+        height={'60px'}
         fontSize={'36px'}
         invert={isShowMenu}
         position={'absolute'}
