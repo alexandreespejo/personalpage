@@ -5,8 +5,8 @@ function Main({ children }) {
   var dark = {
     primary: 'rgb(26, 26, 29)',
     secondary: 'rgba(51, 49, 56, 0.87)',
-    colorHover: 'rgba(138, 135, 143, 0.87)',
-    colorButton: 'rgba(218, 219, 221, 0.87)',
+    colorHover: 'rgba(83, 230, 228, 0.87)',
+    colorButton: 'rgba(250, 250, 250, 0.87)',
   };
   window.addEventListener('click', () => {});
   return (
