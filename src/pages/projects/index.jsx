@@ -1,8 +1,15 @@
+import { useContext } from 'react';
+import { TabContext } from '../../contexts/tab';
 import Main from '../main';
+import Footer from './Footer';
+import Content from './Content';
 const Projects = () => {
+  const content = ['Em Breve', 'projeto2', 'projeto3'];
+  const { activeTab, setActiveTab } = useContext(TabContext);
   return (
     <Main>
-      <h1>Projetos</h1>
+      <Content contentList={content} active={activeTab} />
+      <Footer contentList={content} active={activeTab} set={setActiveTab} />
     </Main>
   );
 };
