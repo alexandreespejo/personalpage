@@ -8,15 +8,24 @@ export const Container = styled.button`
   width: ${(props) => props.width || '140px'};
   height: ${(props) => props.height || '40px'};
   margin-top: 1px;
-  background: transparent;
+  margin-right: ${(props) => (props.marginRight ? props.marginRight : '0px')};
+  background: ${(props) =>
+    props.background ? props.background : 'transparent'};
+  opacity: ${(props) => (props.opacity ? props.opacity : 1)};
   cursor: pointer;
   border: none;
+  border-radius: ${(props) => (props.radius ? props.radius : 'none')};
   outline: none;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
   transform: ${(props) => props.invert && 'rotateZ(180deg)'};
   :hover {
     /* border-bottom: 2px solid ${(props) => props.theme.title}; */
-    color: ${(props) => props.theme.colorHover};
+    color: ${(props) =>
+      props.colorHover ? props.theme.colorHover : props.theme.colorButton};
+  }
+  :active {
+    opacity: ${(props) => (props.active ? 0.5 : 1)};
+    transition: opacity 0.1s linear;
   }
   text-decoration: none;
   font-size: ${(props) => props.fontSize || '18px'};
