@@ -1,15 +1,54 @@
 import Main from '../main';
 import Icon from '../../components/ProfileIcon';
 import { RightContent, LeftContent, Content } from './style';
+import Knowledges from './AnimatedKnows';
 import Label from './Text';
 const About = () => {
+  const knowList = [
+    {
+      src: 'https://img.icons8.com/color/48/000000/react-native.png',
+      name: 'React',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/nodejs.png',
+      name: 'Node',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/javascript.png',
+      name: 'JavaScript',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/html-5.png',
+      name: 'Html',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/css3.png',
+      name: 'Css',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/typescript.png',
+      name: 'TypeScript',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/git.png',
+      name: 'Git',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/python.png',
+      name: 'Python',
+    },
+    {
+      src: 'https://img.icons8.com/color/48/000000/postgreesql.png',
+      name: 'PostgreSQL',
+    },
+  ];
   const img =
     'https://avatars1.githubusercontent.com/u/62163105?s=460&u=5b60edb54072941138b7861e3acefd621c01a039&v=4';
   return (
     <Main>
       <Content>
         <LeftContent>
-          <Label fontSize={'40px'} fontColor={'#80F2EB'}>
+          <Label fontSize={'40px'} fontColor={'rgba(83, 230, 228, 0.87)'}>
             Alexandre Espejo
           </Label>
           <Label
@@ -54,10 +93,11 @@ const About = () => {
           <Label
             fontSize={'20px'}
             fontMargin={'20px 0 0 0'}
-            fontColor={'rgba(218, 219, 221, 0.87)'}
+            fontColor={'rgba(83, 230, 228, 0.87)'}
           >
-            Conhecimentos :
+            Principais habilidades :
           </Label>
+          <Knowledges knowList={knowList} />
         </RightContent>
       </Content>
     </Main>
