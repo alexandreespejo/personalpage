@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import { useState, useEffect } from 'react';
 import { Container, Division } from './style';
 import { useSpring } from 'react-spring';
@@ -7,7 +8,9 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(
-    sessionStorage.getItem('isShowTabs') || false
+    sessionStorage.getItem('isShowTabs') === null
+      ? false
+      : eval(sessionStorage.getItem('isShowTabs'))
   );
   useEffect(() => {
     sessionStorage.setItem('isShowTabs', isShowMenu);
@@ -22,6 +25,8 @@ const Header = () => {
         width={'60px'}
         height={'60px'}
         fontSize={'36px'}
+        active={true}
+        colorHover={true}
         invert={isShowMenu}
         position={'absolute'}
         onClick={() => setIsShowMenu(!isShowMenu)}
@@ -29,16 +34,16 @@ const Header = () => {
         <IoIosArrowForward />
       </Button>
       <Division show={isShowMenu}>
-        <Button as={NavLink} to="/">
+        <Button as={NavLink} to="/" colorHover={true} active={true}>
           Sobre
         </Button>
-        <Button as={NavLink} to="/projects">
+        <Button as={NavLink} to="/projects" colorHover={true} active={true}>
           Projetos
         </Button>
-        <Button as={NavLink} to="/contact">
+        <Button as={NavLink} to="/contact" colorHover={true} active={true}>
           Contato
         </Button>
-        <ToggleButton />
+        {/* <ToggleButton /> */}
       </Division>
     </Container>
   );
