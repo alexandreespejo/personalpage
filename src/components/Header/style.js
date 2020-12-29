@@ -16,10 +16,10 @@ export const Container = styled(animated.header)`
 
 export const Division = styled(animated.div)`
   display: ${(props) => (props.show ? 'flex' : 'none')};
-  margin-left: 60px;
+  /* margin-left: 60px; */
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: calc(100% - 60px);
+  width: 100%;
   height: 100%;
 `;
