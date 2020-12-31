@@ -1,15 +1,38 @@
 import Main from '../main';
+import { useState } from 'react';
 import { config, Spring } from 'react-spring/renderprops';
 import { Title, Content, Division, Image } from './style';
 import contactSvg from '../../assets/notifications.svg';
 const Contact = () => {
+  const [over, setOver] = useState(false);
   return (
     <Main>
-      <Spring from={{ opacity: 0, height: 0 }} to={{ opacity: 1, height: 500 }}>
+      <Spring
+        from={{ opacity: 0, height: '0%', transform: 'rotateX(90deg)' }}
+        to={{
+          opacity: 1,
+          height: over ? '90%' : '0%',
+          transform: over ? 'rotateX(0deg)' : 'rotateX(90deg)',
+        }}
+      >
         {(props) => (
-          <Content column={true} style={props}>
+          <Content
+            column={true}
+            justify={'center'}
+            onMouseOver={() => {
+              setOver(true);
+            }}
+            onMouseOut={() => {
+              setOver(false);
+            }}
+          >
             <Title>Onde você pode me encontrar :</Title>
-            <Content width={'100%'} height={'90%'} background={'transparent'}>
+            <Content
+              width={'100%'}
+              height={'90%'}
+              background={'transparent'}
+              style={props}
+            >
               <Content
                 width={'50%'}
                 height={'100%'}
@@ -44,7 +67,7 @@ const Contact = () => {
                 column={true}
                 justify={'center'}
               >
-                <Image src={contactSvg} width={'300px'} />
+                <Image src={contactSvg} width={'60%'} />
               </Content>
             </Content>
           </Content>
