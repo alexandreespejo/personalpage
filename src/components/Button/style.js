@@ -19,9 +19,12 @@ export const Container = styled.button`
   transition: all 0.2s linear;
   transform: ${(props) => props.invert && 'rotateZ(180deg)'};
   :hover {
-    /* border-bottom: 2px solid ${(props) => props.theme.title}; */
     color: ${(props) =>
-      props.colorHover ? props.theme.colorHover : props.theme.colorButton};
+      props.colorHover
+        ? 'var(--button-secondary)'
+        : props.color
+        ? props.color
+        : 'var(--button-primary)'};
   }
   :active {
     opacity: ${(props) => (props.active ? 0.5 : 1)};
@@ -30,5 +33,5 @@ export const Container = styled.button`
   text-decoration: none;
   font-size: ${(props) => props.fontSize || '18px'};
   font-weight: bold;
-  color: ${(props) => props.theme.colorButton};
+  color: ${(props) => (props.color ? props.color : 'var(--button-primary)')};
 `;

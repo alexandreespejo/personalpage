@@ -48,7 +48,7 @@ const About = () => {
     <Main>
       <Content>
         <LeftContent>
-          <Label fontSize={'40px'} fontColor={'rgba(83, 230, 228, 0.87)'}>
+          <Label fontSize={'40px'} fontColor={'var(--text-primary)'}>
             Alexandre Espejo
           </Label>
           <Label
@@ -61,7 +61,7 @@ const About = () => {
           <Label
             fontSize={'18px'}
             fontMargin={'0 0 0 15px'}
-            fontColor={'rgba(218, 219, 221, 0.87)'}
+            fontColor={'var(--text-secondary)'}
           >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mollit culpa exercitation officia ut
             aliquip nostrud pariatur velit elit ipsum. In anim ipsum do
@@ -93,7 +93,7 @@ const About = () => {
           <Label
             fontSize={'20px'}
             fontMargin={'20px 0 0 0'}
-            fontColor={'rgba(83, 230, 228, 0.87)'}
+            fontColor={'var(--text-primary)'}
           >
             Principais habilidades :
           </Label>

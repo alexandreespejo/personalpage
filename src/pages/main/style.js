@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const Mother = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${(props) => props.theme.primary};
+  background-color: var(--page-primary);
   overflow: hidden;
 `;
 export const Content = styled.main`

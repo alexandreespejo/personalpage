@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const Title = styled.h1`
   color: ${(props) => props.theme.colorButton};
 `;
-export const Content = styled.main`
+export const Content = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.column ? 'column' : 'row')};
   justify-content: ${(props) => (props.justify ? props.justify : 'none')};
@@ -16,9 +16,9 @@ export const Division = styled.div`
   a {
     margin-left: 10px;
     text-decoration: none;
-    color: ${(props) => props.theme.colorButton};
+    color: var(--text-primary);
     :hover {
-      color: ${(props) => props.theme.colorHover};
+      color: var(--button-primary);
     }
     font-size: 20px;
     font-weight: bold;
@@ -26,7 +26,7 @@ export const Division = styled.div`
   label {
     margin-left: 10px;
     text-decoration: none;
-    color: ${(props) => props.theme.colorButton};
+    color: var(--text-primary);
     font-size: 20px;
     font-weight: bold;
   }
