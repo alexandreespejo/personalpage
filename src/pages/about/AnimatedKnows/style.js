@@ -20,5 +20,4 @@ export const KnowCard = styled.div`
   width: 33%;
   height: 33%;
   border-radius: 10px;
-  /* background: ${(props) => props.theme.primary}; */
 `;
