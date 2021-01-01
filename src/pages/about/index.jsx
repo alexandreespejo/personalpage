@@ -52,15 +52,8 @@ const About = () => {
             Alexandre Espejo
           </Label>
           <Label
-            fontSize={'12px'}
-            fontMargin={'-30px 0 30px 0'}
-            fontColor={'rgba(138, 135, 143, 0.87)'}
-          >
-            Desde 2001
-          </Label>
-          <Label
             fontSize={'18px'}
-            fontMargin={'0 0 0 15px'}
+            fontMargin={'0 0 0 10px'}
             fontColor={'var(--text-secondary)'}
           >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mollit culpa exercitation officia ut
