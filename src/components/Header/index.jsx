@@ -17,7 +17,9 @@ const Header = () => {
   }, [isShowMenu]);
   const animationContainer = useSpring({
     width: isShowMenu ? '100%' : '4%',
-    backgroundColor: isShowMenu ? 'rgba(51, 49, 56, 0.87)' : 'rgb(26, 26, 29)',
+    backgroundColor: isShowMenu
+      ? 'var(--page-secondary)'
+      : 'var(--page-primary)',
   });
   return (
     <Container showMenu={isShowMenu} style={animationContainer}>
