@@ -1,6 +1,6 @@
 import { Spring } from 'react-spring/renderprops';
 import { Text } from './style';
-const Label = ({ children, fontSize, fontMargin, fontColor }) => {
+const Label = ({ children, fontSize, margin, opacity, fontColor }) => {
   return (
     <Spring
       from={{ opacity: 0, transform: 'translate3d(0,200px,0)' }}
@@ -10,9 +10,10 @@ const Label = ({ children, fontSize, fontMargin, fontColor }) => {
       {(props) => (
         <Text
           fontSize={fontSize}
-          fontMargin={fontMargin}
           fontColor={fontColor}
           style={props}
+          margin={margin}
+          opacity={opacity}
         >
           {children}
         </Text>
