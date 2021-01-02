@@ -2,6 +2,7 @@ import Main from '../main';
 import { useState } from 'react';
 import { config, Spring } from 'react-spring/renderprops';
 import { Title, Content, Division, Image } from './style';
+import { MdLocationSearching } from 'react-icons/md';
 import contactSvg from '../../assets/notifications.svg';
 const Contact = () => {
   const [over, setOver] = useState(false);
@@ -14,6 +15,7 @@ const Contact = () => {
           height: over ? '90%' : '0%',
           transform: over ? 'rotateX(0deg)' : 'rotateX(90deg)',
         }}
+        config={{ duration: 300 }}
       >
         {(props) => (
           <Content
@@ -26,7 +28,9 @@ const Contact = () => {
               setOver(false);
             }}
           >
-            <Title>Onde você pode me encontrar :</Title>
+            <Title>
+              <label>Onde você pode me encontrar :</label>
+            </Title>
             <Content
               width={'100%'}
               height={'90%'}
@@ -34,7 +38,7 @@ const Contact = () => {
               style={props}
             >
               <Content
-                width={'50%'}
+                width={'100%'}
                 height={'100%'}
                 column={true}
                 justify={'center'}
@@ -60,14 +64,6 @@ const Contact = () => {
                   <Image src="https://img.icons8.com/color/48/000000/gmail--v2.png" />
                   <label>alexandre.espejo@unesp.com</label>
                 </Division>
-              </Content>
-              <Content
-                width={'50%'}
-                height={'100%'}
-                column={true}
-                justify={'center'}
-              >
-                <Image src={contactSvg} width={'60%'} />
               </Content>
             </Content>
           </Content>
