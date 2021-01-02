@@ -5,8 +5,10 @@ export const Container = styled(animated.header)`
   display: flex;
   flex-direction: row;
   align-items: center;
+  background-color: var(--page-secondary);
   justify-content: ${(props) => (props.showMenu ? 'space-between' : 'start')};
   height: 60px;
+  width: 100%;
   transition: all 0.25s linear;
 `;
 
