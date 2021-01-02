@@ -16,38 +16,39 @@ const Header = () => {
     sessionStorage.setItem('isShowTabs', isShowMenu);
   }, [isShowMenu]);
   const animationContainer = useSpring({
-    width: isShowMenu ? '100%' : '4%',
-    backgroundColor: isShowMenu
-      ? 'var(--page-secondary)'
-      : 'var(--page-primary)',
+    transform: isShowMenu ? 'translate3d(0,0,0)' : 'translate3d(-100%,0,0)',
   });
   return (
-    <Container showMenu={isShowMenu} style={animationContainer}>
+    <>
       <Button
         width={'60px'}
         height={'60px'}
         fontSize={'36px'}
+        zIndex={9}
         active={true}
         colorHover={true}
         invert={isShowMenu}
         position={'absolute'}
         onClick={() => setIsShowMenu(!isShowMenu)}
       >
+        {' '}
         <IoIosArrowForward />
       </Button>
-      <Division show={isShowMenu}>
-        <Button as={NavLink} to="/" colorHover={true} active={true}>
-          Sobre
-        </Button>
-        <Button as={NavLink} to="/projects" colorHover={true} active={true}>
-          Projetos
-        </Button>
-        <Button as={NavLink} to="/contact" colorHover={true} active={true}>
-          Contato
-        </Button>
-        {/* <ToggleButton /> */}
-      </Division>
-    </Container>
+      <Container showMenu={isShowMenu} style={animationContainer}>
+        <Division show={isShowMenu}>
+          <Button as={NavLink} to="/" colorHover={true} active={true}>
+            Sobre
+          </Button>
+          <Button as={NavLink} to="/projects" colorHover={true} active={true}>
+            Projetos
+          </Button>
+          <Button as={NavLink} to="/contact" colorHover={true} active={true}>
+            Contato
+          </Button>
+          {/* <ToggleButton /> */}
+        </Division>
+      </Container>
+    </>
   );
 };
 
