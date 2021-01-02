@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.button`
   display: ${(props) => props.display || 'flex'};
   position: ${(props) => props.position || 'none'};
+  z-index: ${(props) => props.zIndex};
   align-items: center;
   justify-content: center;
   width: ${(props) => props.width || '140px'};
