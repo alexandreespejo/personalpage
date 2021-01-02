@@ -6,4 +6,5 @@ export const Icon = styled(animated.img)`
   width: ${(props) => props.iconWidth};
   height: ${(props) => props.iconWidth};
   border-radius: 50%;
+  border: 5px solid var(--page-primary-light);
 `;
