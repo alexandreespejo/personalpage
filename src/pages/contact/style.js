@@ -1,13 +1,28 @@
 import styled from 'styled-components';
-export const Title = styled.h1`
-  color: ${(props) => props.theme.colorButton};
+export const Title = styled.div`
+  label {
+    background: -webkit-linear-gradient(
+      62deg,
+      var(--button-primary) 0%,
+      rgba(253, 187, 45, 0.8) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+  color: var(--text-primary);
 `;
 export const Content = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.column ? 'column' : 'row')};
   justify-content: ${(props) => (props.justify ? props.justify : 'none')};
-  background: ${(props) =>
-    props.background ? props.background : 'rgba(51, 49, 56, 0.35)'};
+  -webkit-box-shadow: ${(props) =>
+    props.shadow ? '12px 12px 16px -3px rgba(0, 0, 0, 0.2)' : 'none'};
+  box-shadow: ${(props) =>
+    props.shadow ? '12px 12px 16px -3px rgba(0, 0, 0, 0.2)' : 'none'};
   align-items: ${(props) => (props.align ? props.align : 'center')};
   width: ${(props) => (props.width ? props.width : '1000px')};
   height: ${(props) => (props.height ? props.height : '500px')};
