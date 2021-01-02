@@ -11,12 +11,24 @@ export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  justify-content: center;
+  h1 {
+    background: -webkit-linear-gradient(
+      62deg,
+      var(--button-primary) 0%,
+      rgba(253, 187, 45, 0.8) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  width: 40%;
   height: 100%;
 `;
 export const RightContent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
   height: 100%;
 `;
