@@ -4,13 +4,12 @@ export const Knowledges = styled.div`
   display: flex;
   align-self: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10px;
   width: 280px;
   height: 300px;
   flex-wrap: wrap;
   border-radius: 20px;
-  background: rgba(51, 49, 56, 0.35);
 `;
 export const KnowCard = styled.div`
   display: flex;
@@ -20,4 +19,7 @@ export const KnowCard = styled.div`
   width: 33%;
   height: 33%;
   border-radius: 10px;
+  -webkit-box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.5);
+  background: var(--page-primary-light);
 `;
