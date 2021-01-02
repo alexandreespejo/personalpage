@@ -7,41 +7,62 @@ export const Main = styled(animated.main)`
   grid-template-rows: 10% 80% 10%;
   grid-template-areas:
     'title title title'
-    'image image text'
-    'link link text';
+    'image image image'
+    'link link none';
   margin-top: -60px;
   border-radius: 20px;
-  background: var(--page-secondary);
 `;
 
 export const Title = styled.div`
-  grid-area: title;
   display: flex;
   align-items: center;
-  h1 {
-    color: var(--text-primary);
-  }
   justify-content: center;
-  background: var(--page-secondary);
+  background-color: var(--page-primary-light);
+  grid-area: title;
+  -webkit-box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.2);
+  box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 40px 40px 0px 0px;
+  -moz-border-radius: 40px 40px 0px 0px;
+  border-radius: 40px 40px 0px 0px;
+  h2 {
+    color: var(--button-primary);
+    background: -webkit-linear-gradient(
+      62deg,
+      var(--button-primary) 0%,
+      rgba(253, 187, 45, 0.8) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 `;
 export const Text = styled.div`
-  grid-area: text;
   display: flex;
+  position: absolute;
+  background-color: var(--page-primary-light);
+  left: 55%;
+  z-index: 9;
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
-  p {
-    margin-right: 15px;
-    color: var(--text-secondary);
-  }
   text-align: justify;
-  background: var(--page-secondary);
+  -webkit-box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.8);
+  box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.8);
+  p {
+    max-width: 80%;
+    color: var(--text-primary);
+  }
 `;
 export const Link = styled.div`
   grid-area: link;
   display: flex;
   align-items: center;
+  background-color: var(--page-primary-light);
   justify-content: space-around;
-  background: var(--page-secondary);
+  -webkit-border-radius: 0px 0px 40px 40px;
+  -moz-border-radius: 0px 0px 40px 40px;
+  border-radius: 0px 0px 40px 40px;
 `;
 export const Image = styled.div`
   grid-area: image;
@@ -49,8 +70,8 @@ export const Image = styled.div`
   img {
     max-width: 100%;
     max-height: 100%;
+    margin-left: 50px;
   }
   align-items: center;
-  justify-content: center;
-  background: var(--page-secondary);
+  justify-content: initial;
 `;
