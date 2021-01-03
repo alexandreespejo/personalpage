@@ -1,4 +1,3 @@
-import Main from '../main';
 import Icon from '../../components/ProfileIcon';
 import { useSpring, animated } from 'react-spring';
 import { RightContent, LeftContent, Content } from './style';
@@ -51,39 +50,37 @@ const About = () => {
   const img =
     'https://avatars1.githubusercontent.com/u/62163105?s=460&u=5b60edb54072941138b7861e3acefd621c01a039&v=4';
   return (
-    <Main>
-      <Content>
-        <LeftContent>
-          <animated.h1 style={animation}>Alexandre Espejo</animated.h1>
-          <Label fontSize={'20px'} fontColor={'rgba(179, 171, 154,0.5)'}>
-            Desenvolvedor Full-Stack jr.
-          </Label>
-          <Label
-            fontSize={'18px'}
-            fontColor={'var(--text-secondary)'}
-            margin={'50px 0px 0px 0px '}
-          >
-            Olá, sou o <strong>Alexandre Espejo</strong> um desenvolvedor de
-            Bauru-SP que a pouco tempo está desbravando esse vasto universo da
-            programação.Apaixonado por <strong>JavaScript</strong>, às
-            tecnologias que mais gosto de estudar e trabalhar são{' '}
-            <strong>Node.js, React.js e React Native</strong>, porem sempre
-            estou aberto a me aventurar em novas tecnologias.
-          </Label>
-        </LeftContent>
-        <RightContent>
-          <Icon iconWidth={'200px'} children={img} />
-          <Label
-            fontSize={'20px'}
-            margin={'15px 0px 0px 0px'}
-            fontColor={'var(--text-primary)'}
-          >
-            Principais habilidades :
-          </Label>
-          <Knowledges knowList={knowList} />
-        </RightContent>
-      </Content>
-    </Main>
+    <Content>
+      <LeftContent>
+        <animated.h1 style={animation}>Alexandre Espejo</animated.h1>
+        <Label fontSize={'20px'} fontColor={'rgba(179, 171, 154,0.5)'}>
+          Desenvolvedor Full-Stack jr.
+        </Label>
+        <Label
+          fontSize={'18px'}
+          fontColor={'var(--text-secondary)'}
+          margin={'50px 0px 0px 0px '}
+        >
+          Olá, sou o <strong>Alexandre Espejo</strong> um desenvolvedor de
+          Bauru-SP que a pouco tempo está desbravando esse vasto universo da
+          programação.Apaixonado por <strong>JavaScript</strong>, às tecnologias
+          que mais gosto de estudar e trabalhar são{' '}
+          <strong>Node.js, React.js e React Native</strong>, porem sempre estou
+          aberto a me aventurar em novas tecnologias.
+        </Label>
+      </LeftContent>
+      <RightContent>
+        <Icon iconWidth={'200px'} children={img} />
+        <Label
+          fontSize={'20px'}
+          margin={'15px 0px 0px 0px'}
+          fontColor={'var(--text-primary)'}
+        >
+          Principais habilidades :
+        </Label>
+        <Knowledges knowList={knowList} />
+      </RightContent>
+    </Content>
   );
 };
 
