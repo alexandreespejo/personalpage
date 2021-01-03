@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     --button-secondary:rgb(0, 210, 180);
   }
   body {
+    font-family:sans-serif;
     margin: 0;
     padding: 0;
     color: whitesmoke;
