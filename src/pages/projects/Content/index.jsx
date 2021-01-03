@@ -30,6 +30,7 @@ const Content = ({ contentList, active }) => {
                     colorHover={true}
                     active={true}
                     color={' var(--text-primary)'}
+                    target="blank"
                   >
                     {<AiOutlineLink />}
                     {link.name + ' '}
