@@ -6,7 +6,7 @@ export const Mother = styled.div`
   overflow: hidden;
 `;
 export const Content = styled.main`
-  display: flex;
+  display: ${(props) => (props.show ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
   width: 100%;
