@@ -1,9 +1,19 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 const TabContext = createContext();
 const TabProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const [activePage, setActivePage] = useState(
+    sessionStorage.getItem('currentyPage') === null
+      ? 0
+      : parseInt(sessionStorage.getItem('currentyPage'))
+  );
+  useEffect(() => {
+    sessionStorage.setItem('currentyPage', activePage);
+  }, [activePage]);
   return (
-    <TabContext.Provider value={{ activeTab, setActiveTab }}>
+    <TabContext.Provider
+      value={{ activeTab, setActiveTab, activePage, setActivePage }}
+    >
       {children}
     </TabContext.Provider>
   );
