@@ -1,12 +1,12 @@
 /* eslint no-eval: 0 */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { TabContext } from '../../contexts/tab';
 import { Container, Division } from './style';
 import { useSpring } from 'react-spring';
 import Button from '../Button';
-import ToggleButton from '../ToggleButton';
 import { IoIosArrowForward } from 'react-icons/io';
-import { NavLink } from 'react-router-dom';
 const Header = () => {
+  const { setActivePage } = useContext(TabContext);
   const [isShowMenu, setIsShowMenu] = useState(
     sessionStorage.getItem('isShowTabs') === null
       ? false
@@ -34,33 +34,29 @@ const Header = () => {
         {' '}
         <IoIosArrowForward />
       </Button>
-      <Container showMenu={isShowMenu} style={animationContainer}>
-        <Division show={isShowMenu}>
+      <Container isShowMenu={isShowMenu}>
+        <Division>
           <Button
-            as={NavLink}
-            to="/personalpage/"
+            onClick={() => setActivePage(0)}
             colorHover={true}
             active={true}
           >
             Sobre
           </Button>
           <Button
-            as={NavLink}
-            to="/personalpage/projects"
+            onClick={() => setActivePage(1)}
             colorHover={true}
             active={true}
           >
             Projetos
           </Button>
           <Button
-            as={NavLink}
-            to="/personalpage/contact"
+            onClick={() => setActivePage(2)}
             colorHover={true}
             active={true}
           >
             Contato
           </Button>
-          {/* <ToggleButton /> */}
         </Division>
       </Container>
     </>
