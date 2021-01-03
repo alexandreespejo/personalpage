@@ -20,6 +20,15 @@ export const LeftContent = styled.div`
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
   width: 40%;
   height: 100%;
