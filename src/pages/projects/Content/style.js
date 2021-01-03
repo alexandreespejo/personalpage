@@ -47,6 +47,7 @@ export const Text = styled.div`
   display: flex;
   position: absolute;
   background-color: var(--page-primary-light);
+  line-height: 20px;
   left: 55%;
   z-index: 9;
   width: 400px;
