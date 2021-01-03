@@ -9,9 +9,9 @@ function App() {
     <TabProvider>
       <Switch>
         <Main>
-          <Route path="/" exact component={About} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/personalpage/" exact component={About} />
+          <Route path="/personalpage/projects" exact component={Projects} />
+          <Route path="/personalpage/contact" exactcomponent={Contact} />
         </Main>
       </Switch>
     </TabProvider>

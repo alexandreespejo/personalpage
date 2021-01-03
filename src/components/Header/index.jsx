@@ -36,13 +36,28 @@ const Header = () => {
       </Button>
       <Container showMenu={isShowMenu} style={animationContainer}>
         <Division show={isShowMenu}>
-          <Button as={NavLink} to="/" colorHover={true} active={true}>
+          <Button
+            as={NavLink}
+            to="/personalpage/"
+            colorHover={true}
+            active={true}
+          >
             Sobre
           </Button>
-          <Button as={NavLink} to="/projects" colorHover={true} active={true}>
+          <Button
+            as={NavLink}
+            to="/personalpage/projects"
+            colorHover={true}
+            active={true}
+          >
             Projetos
           </Button>
-          <Button as={NavLink} to="/contact" colorHover={true} active={true}>
+          <Button
+            as={NavLink}
+            to="/personalpage/contact"
+            colorHover={true}
+            active={true}
+          >
             Contato
           </Button>
           {/* <ToggleButton /> */}
