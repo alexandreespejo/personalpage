@@ -1,5 +1,5 @@
 import pic1 from '../../assets/photo.JPG';
-export const data = [
+export const contentList = [
   {
     name: 'Portifólio Web',
     descripition:
