@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Content = styled.main`
   display: flex;
   align-items: center;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    overflow-y: auto;
+  }
   width: 100%;
   height: 100%;
 `;
@@ -29,6 +33,10 @@ export const LeftContent = styled.div`
     -ms-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 500px) {
+    height: auto;
+    width: 100%;
   }
   width: 40%;
   height: 100%;
