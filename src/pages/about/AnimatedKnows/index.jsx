@@ -1,6 +1,7 @@
 import { Spring } from 'react-spring/renderprops';
 import { Knowledges, KnowCard } from './style';
-const AnimatedKnows = ({ knowList }) => {
+import { knowList } from '../aboutData';
+const AnimatedKnows = () => {
   return (
     <Spring
       from={{ opacity: 0, transform: 'translate3d(0,200px,0)' }}
@@ -12,9 +13,10 @@ const AnimatedKnows = ({ knowList }) => {
           {knowList.map((item, index) => {
             return (
               <Spring
+                key={index}
                 from={{
                   opacity: 0,
-                  transform: 'translate3d(200px,0,0) ',
+                  transform: 'translate3d(40%,0,0) ',
                 }}
                 to={{
                   opacity: 1,
