@@ -22,9 +22,10 @@ const Content = ({ contentList, active }) => {
             </Title>
 
             <Link>
-              {contentList[item].links?.map((link) => {
+              {contentList[item].links?.map((link, index) => {
                 return (
                   <Button
+                    key={index}
                     as="a"
                     href={link.src}
                     colorHover={true}
