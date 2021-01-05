@@ -1,10 +1,10 @@
 import { TabProvider } from './contexts/tab';
 import Main from './pages/main';
-function App() {
+const App = () => {
   return (
     <TabProvider>
       <Main />
     </TabProvider>
   );
-}
+};
 export default App;
