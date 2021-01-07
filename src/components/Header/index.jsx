@@ -1,8 +1,7 @@
 /* eslint no-eval: 0 */
 import { useState, useEffect, useContext } from 'react';
 import { TabContext } from '../../contexts/tab';
-import { Container, Division } from './style';
-import { useSpring } from 'react-spring';
+import { Container, Division } from '../../styles/header';
 import Button from '../Button';
 import { IoIosArrowForward } from 'react-icons/io';
 const Header = () => {
@@ -12,12 +11,9 @@ const Header = () => {
       ? false
       : eval(sessionStorage.getItem('isShowTabs'))
   );
-  useEffect(() => {
-    sessionStorage.setItem('isShowTabs', isShowMenu);
-  }, [isShowMenu]);
-  const animationContainer = useSpring({
-    transform: isShowMenu ? 'translate3d(0,0,0)' : 'translate3d(-100%,0,0)',
-  });
+  useEffect(() => sessionStorage.setItem('isShowTabs', isShowMenu), [
+    isShowMenu,
+  ]);
   return (
     <>
       <Button

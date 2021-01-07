@@ -1,5 +1,5 @@
 import { Spring } from 'react-spring/renderprops';
-import { Text } from './style';
+import { Text } from '../../../styles/aboutText';
 const Label = ({ children, fontSize, margin, opacity, fontColor }) => {
   return (
     <Spring

@@ -1,5 +1,5 @@
 import { Spring } from 'react-spring/renderprops';
-import { Icon } from './style';
+import { Icon } from '../../styles/profileIcon';
 const ProfileIcon = ({ children, iconWidth }) => {
   return (
     <Spring

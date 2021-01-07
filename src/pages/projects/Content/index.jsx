@@ -1,5 +1,5 @@
-import { useTransition, useSpring, animated } from 'react-spring';
-import { Main, Title, Text, Link, Image } from './style';
+import { useTransition } from 'react-spring';
+import { Main, Title, Text, Link, Image } from '../../../styles/projectContent';
 import Button from '../../../components/Button';
 import { AiOutlineLink, BiMeteor } from 'react-icons/all';
 const Content = ({ contentList, active }) => {

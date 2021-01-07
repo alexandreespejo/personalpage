@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { TabContext } from '../../contexts/tab';
-import { Mother, Content } from './style';
+import { Mother, Content } from '../../styles/main';
 import Header from '../../components/Header';
 import About from '../about';
 import Projects from '../projects';

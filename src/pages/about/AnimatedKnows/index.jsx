@@ -1,5 +1,5 @@
 import { Spring } from 'react-spring/renderprops';
-import { Knowledges, KnowCard } from './style';
+import { Knowledges, KnowCard } from '../../../styles/aboutAniKnows';
 import { knowList } from '../aboutData';
 const AnimatedKnows = () => {
   return (

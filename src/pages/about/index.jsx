@@ -1,6 +1,6 @@
 import Icon from '../../components/ProfileIcon';
 import { useSpring, animated } from 'react-spring';
-import { RightContent, LeftContent, Content } from './style';
+import { RightContent, LeftContent, Content } from '../../styles/about';
 import { aboutContent } from './aboutData';
 import Knowledges from './AnimatedKnows';
 import Label from './Text';

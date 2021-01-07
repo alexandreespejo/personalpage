@@ -1,4 +1,4 @@
-import { Container } from './style';
+import { Container } from '../../../styles/projectFooter';
 import Button from '../../../components/Button';
 const Footer = ({ contentList, active, set }) => {
   return (

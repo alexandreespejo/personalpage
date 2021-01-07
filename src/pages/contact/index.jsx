@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Spring } from 'react-spring/renderprops';
-import { Title, Content, Division, Image } from './style';
+import { Title, Content, Division, Image } from '../../styles/contact';
 const Contact = () => {
   const [hover, setHover] = useState(false);
   const changeHover = () => setHover(!hover);
