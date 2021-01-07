@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Content = styled.main`
   display: flex;
   align-items: center;
-  @media (max-width: 500px) {
+  @media (max-width: 980px) {
     flex-direction: column;
     overflow-y: auto;
   }
@@ -34,10 +34,10 @@ export const LeftContent = styled.div`
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     height: auto;
     width: 100%;
-  }
+  } */
   width: 40%;
   height: 100%;
 `;
