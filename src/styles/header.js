@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   background-color: var(--page-secondary);
-  height: 60px;
+  height: 9%;
   width: 100%;
   transform: ${(props) =>
     props.isShowMenu ? 'translate3d(0,0,0)' : 'translate3d(-100%,0,0)'};

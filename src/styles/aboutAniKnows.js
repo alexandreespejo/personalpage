@@ -10,6 +10,13 @@ export const Knowledges = styled.div`
   height: 300px;
   flex-wrap: wrap;
   border-radius: 20px;
+  @media (max-width: 980px) {
+    width: 40%;
+    height: 60%;
+    max-height: 400px;
+    min-height: 300px;
+    min-width: 280px;
+  }
 `;
 export const KnowCard = styled.div`
   display: flex;

@@ -6,6 +6,7 @@ export const Content = styled.main`
   @media (max-width: 980px) {
     flex-direction: column;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   width: 100%;
   height: 100%;
@@ -16,12 +17,20 @@ export const LeftContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40%;
+  height: 100%;
+  @media (max-width: 980px) {
+    width: 100%;
+    height: auto;
+  }
   h1 {
     background: -webkit-linear-gradient(
       62deg,
       var(--button-primary) 0%,
       rgba(253, 187, 45, 0.8) 100%
     );
+    min-width: 100%;
+    text-align: center;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
@@ -34,12 +43,6 @@ export const LeftContent = styled.div`
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
   }
-  /* @media (max-width: 500px) {
-    height: auto;
-    width: 100%;
-  } */
-  width: 40%;
-  height: 100%;
 `;
 export const RightContent = styled.div`
   display: flex;
@@ -48,4 +51,7 @@ export const RightContent = styled.div`
   justify-content: center;
   width: 60%;
   height: 100%;
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 `;
