@@ -1,10 +1,9 @@
-import pic1 from '../../assets/photo.JPG';
 export const contentList = [
   {
-    name: 'Portifólio Web',
+    name: 'PORTIFÓLIO',
     descripition:
       'Projeto de página pessoal integrada com portfólio,com intuito de aprender sobre a lib de animações React-spring.Desenvolvida com React.js, Styled-components, React-icons e React-spring.',
-    picture: `${pic1}`,
+    picture: 'https://i.ibb.co/1MjHDcS/proj1.jpg',
     links: [
       {
         name: 'Repositório',
@@ -12,5 +11,4 @@ export const contentList = [
       },
     ],
   },
-  { name: 'Em Breve' },
 ];
