@@ -9,6 +9,7 @@ export const Content = styled.main`
   display: ${(props) => (props.show ? 'flex' : 'none')};
   justify-content: center;
   align-items: center;
+  margin-top: 9vh;
   width: 100%;
-  height: calc(100% - 60px);
+  height: 91vh;
 `;

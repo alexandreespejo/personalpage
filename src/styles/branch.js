@@ -62,10 +62,26 @@ export const Branch = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  :hover {
+    span {
+      transition: all 0.4s ease-out;
+      width: ${(props) => props.unlocked && '100px'};
+      height: ${(props) => props.unlocked && '57px'};
+      background: ${(props) => props.unlocked && 'transparent'};
+      border: ${(props) => props.unlocked && 'none'};
+      box-shadow: ${(props) => props.unlocked && 'none'};
+      span {
+        font-size: ${(props) => props.unlocked && '20px'};
+        background: ${(props) => props.unlocked && 'var(--page-primary-light)'};
+        transform: ${(props) => props.unlocked && 'rotate(360deg)'};
+      }
+    }
+  }
   span {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 400;
     font-size: 25px;
     color: ${(props) =>
       props.unlocked ? 'rgba(250, 250, 250, 0.8)' : 'rgba(119, 127, 129, 0.8)'};

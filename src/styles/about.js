@@ -1,57 +1,34 @@
 import styled from 'styled-components';
 
 export const Content = styled.main`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  @media (max-width: 980px) {
-    flex-direction: column;
+  transition: all 0.6s linear;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-template-areas: 'hS sS' 'card card';
+    main:last-child {
+      grid-area: card;
+    }
+  }
+  @media (max-width: 680px) {
+    display: flex;
+    flex-direction: column-reverse;
     overflow-y: auto;
     overflow-x: hidden;
   }
   width: 100%;
   height: 100%;
 `;
-
-export const LeftContent = styled.div`
+export const Division = styled.main`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 100%;
   height: 100%;
-  @media (max-width: 980px) {
-    width: 100%;
-    height: auto;
-  }
-  h1 {
-    background: -webkit-linear-gradient(
-      62deg,
-      var(--button-primary) 0%,
-      rgba(253, 187, 45, 0.8) 100%
-    );
-    min-width: 100%;
-    text-align: center;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    -o-background-clip: text;
-    -ms-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    -o-text-fill-color: transparent;
-    -ms-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-`;
-export const RightContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  height: 100%;
-  @media (max-width: 980px) {
-    width: 100%;
-  }
 `;
