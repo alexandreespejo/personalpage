@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Tree, Container } from '../../../styles/hardSkills';
 import Branch from '../branch';
 import {
