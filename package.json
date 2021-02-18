@@ -1,6 +1,4 @@
 {
-  "homepage": "https://alexandreespejo.github.io/personalpage/",
-  "name": "personalpage",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -19,8 +17,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
