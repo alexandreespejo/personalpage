@@ -12,29 +12,27 @@ import {
   FaPython,
 } from 'react-icons/all';
 const HardSkills = () => {
-  const [unlock, setUnlock] = useState(false);
-  setTimeout(() => setUnlock(true), 500);
   return (
     <Container>
       <h2>HABILIDADES PRIMÁRIAS</h2>
       <Tree>
         <Branch invisible={true} />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<DiJavascript1 />}
           bottom={true}
           desc={'JavaScript'}
         />
         <Branch invisible={true} />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<FaReact />}
           right={true}
           bottom={true}
           desc={'React.js'}
         />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<FaNodeJs />}
           right={true}
           top={true}
@@ -45,30 +43,30 @@ const HardSkills = () => {
         <Branch right={true} top={true} bottom={true} />
         <Branch right={true} left={true} />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<SiCss3 />}
           bottom={true}
           left={true}
           desc={'Css'}
         />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<FaPython />}
           top={true}
           bottom={true}
           desc={'Python'}
         />
         <Branch invisible={true} />
-        <Branch unlocked={unlock} icon={<SiHtml5 />} top={true} desc={'Html'} />
+        <Branch unlocked={true} icon={<SiHtml5 />} top={true} desc={'Html'} />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<FaGitAlt />}
           top={true}
           right={true}
           desc={'Git'}
         />
         <Branch
-          unlocked={unlock}
+          unlocked={true}
           icon={<SiPostgresql />}
           left={true}
           desc={'Postgre'}
