@@ -64,8 +64,8 @@ export const Text = styled.div`
   align-items: center;
   justify-content: center;
   text-align: justify;
-  -webkit-box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.8);
-  box-shadow: 12px 12px 16px -3px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 6px 6px 16px -3px rgba(0, 0, 0, 0.8);
+  box-shadow: 6px 6px 16px -3px rgba(0, 0, 0, 0.8);
   p {
     max-width: 80%;
     color: var(--text-primary);

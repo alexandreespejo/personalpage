@@ -72,7 +72,9 @@ export const Branch = styled.span`
       box-shadow: ${(props) => props.unlocked && 'none'};
       span {
         font-size: ${(props) => props.unlocked && '20px'};
-        background: ${(props) => props.unlocked && 'var(--page-primary-light)'};
+        background: ${(props) => props.unlocked && '#153a35'};
+        border: ${(props) =>
+          props.unlocked && '2px solid rgba(250, 250, 250, 0.8)'};
         transform: ${(props) => props.unlocked && 'rotate(360deg)'};
       }
     }
