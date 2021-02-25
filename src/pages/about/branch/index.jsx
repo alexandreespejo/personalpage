@@ -12,6 +12,7 @@ const BranchComponent = ({
   desc,
 }) => {
   const [isHover, setIsHover] = useState(false);
+
   return (
     <Group
       top={top}
@@ -21,12 +22,8 @@ const BranchComponent = ({
       unlocked={unlocked}
       invisible={invisible}
     >
-      <Branch
-        unlocked={unlocked}
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-      >
-        <span>
+      <Branch unlocked={unlocked} onMouseLeave={() => setIsHover(false)}>
+        <span onAnimationEnd={() => setIsHover(true)}>
           <span>{unlocked ? isHover ? desc : icon : <AiFillLock />}</span>
         </span>
       </Branch>
