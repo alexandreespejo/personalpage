@@ -1,4 +1,32 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const afterFirstSpan = keyframes`
+0%{
+  width: 45px;
+  height: 45px;
+}
+84%{
+  width: 45px;
+  height: 45px;
+}
+100%{
+  width: 100px;
+  height: 57px;
+}
+`;
+const afterSecondSpan = keyframes`
+0%{
+  transform:rotate(0deg);
+}
+70%{
+  transform:rotate(360deg);
+  
+  }
+`;
+const afterFirstSvg = keyframes`
+  0%{opacity:1;}
+  100%{opacity:0;}
+`;
 export const Group = styled.div`
   display: ${(props) => (props.invisible ? 'none' : 'grid')};
   grid-template-columns: 20% 60% 20%;
@@ -62,19 +90,29 @@ export const Branch = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+
   :hover {
     span {
-      transition: all 0.4s ease-out;
+      animation: ${(props) => props.unlocked && afterFirstSpan} 0.6s ease-in;
+      animation-play-state: ${(props) =>
+        props.unlocked ? 'running' : 'paused'};
       width: ${(props) => props.unlocked && '100px'};
       height: ${(props) => props.unlocked && '57px'};
-      background: ${(props) => props.unlocked && 'transparent'};
-      border: ${(props) => props.unlocked && 'none'};
       box-shadow: ${(props) => props.unlocked && 'none'};
       span {
+        svg {
+          animation: ${(props) => props.unlocked && afterFirstSvg} 0.6s linear;
+          animation-play-state: ${(props) =>
+            props.unlocked ? 'running' : 'paused'};
+        }
+        transition: border 0.7s ease-in;
+        animation: ${(props) => props.unlocked && afterSecondSpan} 0.6s linear;
+        animation-play-state: ${(props) =>
+          props.unlocked ? 'running' : 'paused'};
+
         font-size: ${(props) => props.unlocked && '20px'};
         background: ${(props) => props.unlocked && '#153a35'};
-        border: ${(props) =>
-          props.unlocked && '2px solid rgba(250, 250, 250, 0.8)'};
+        border-color: ${(props) => props.unlocked && 'transparent'};
         transform: ${(props) => props.unlocked && 'rotate(360deg)'};
       }
     }
@@ -98,6 +136,8 @@ export const Branch = styled.span`
           : 'rgba(119, 127, 129, 0.8)'};
     border-radius: 10px;
     span {
+      width: 45px;
+      height: 45px;
       transform: rotate(134.72deg);
       svg {
         transform: rotate(-134.72deg);
