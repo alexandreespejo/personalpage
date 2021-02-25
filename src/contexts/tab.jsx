@@ -2,8 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 const TabContext = createContext();
 const TabProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0);
-  const [experience, setExperience] = useState(100);
-  const [level, setLevel] = useState(1);
+  const [isVisible, setIsVisible] = useState(false);
   const [activePage, setActivePage] = useState(
     sessionStorage.getItem('currentyPage') === null
       ? 0
@@ -12,12 +11,6 @@ const TabProvider = ({ children }) => {
   useEffect(() => {
     sessionStorage.setItem('currentyPage', activePage);
   }, [activePage]);
-  useEffect(() => {
-    if (experience >= 1000) {
-      setExperience(0);
-      setLevel(level + 1);
-    }
-  }, [experience, level]);
 
   return (
     <TabContext.Provider
@@ -26,10 +19,8 @@ const TabProvider = ({ children }) => {
         setActiveTab,
         activePage,
         setActivePage,
-        experience,
-        setExperience,
-        level,
-        setLevel,
+        isVisible,
+        setIsVisible,
       }}
     >
       {children}
