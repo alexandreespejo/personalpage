@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { TabContext } from '../../../contexts/tab';
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -5,7 +7,8 @@ import {
   AiTwotoneMail,
 } from 'react-icons/ai';
 import { Content } from '../../../styles/contactOptions';
-const contactOptions = () => {
+const ContactOptions = () => {
+  const { setIsVisible } = useContext(TabContext);
   return (
     <Content>
       <a
@@ -35,10 +38,10 @@ const contactOptions = () => {
           <AiFillInstagram />
         </button>
       </a>
-      <button>
+      <button onClick={() => setIsVisible(true)}>
         <AiTwotoneMail />
       </button>
     </Content>
   );
 };
-export default contactOptions;
+export default ContactOptions;
