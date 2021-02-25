@@ -46,11 +46,11 @@ export const Content = styled.div`
     outline: none;
     cursor: pointer;
     :hover {
-      background: rgba(0, 191, 166, 0.2);
-      color: var(--button-primary);
+      background: var(--green-secondary);
+      color: var(--green-primary);
       box-sizing: border-box;
       box-shadow: 0px 0px 100px rgba(255, 251, 251, 0.1);
-      border: 3px solid var(--button-primary);
+      border: 3px solid var(--green-primary);
       svg {
         animation: ${moviment} 2s linear infinite;
       }

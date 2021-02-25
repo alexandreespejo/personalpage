@@ -12,7 +12,7 @@ const Footer = ({ contentList, active, set }) => {
             background={
               active !== index
                 ? ' rgba(51, 49, 56, 0.87)'
-                : 'var(--button-primary)'
+                : 'var(--green-primary)'
             }
             color={'var(--text-primary)'}
             radius={'50%'}

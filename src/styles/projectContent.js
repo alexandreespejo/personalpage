@@ -32,15 +32,15 @@ export const Title = styled.div`
   -moz-border-radius: 40px 40px 0px 0px;
   border-radius: 40px 40px 0px 0px;
   svg {
-    color: var(--button-primary);
+    color: var(--green-primary);
     font-size: 24px;
     margin-left: 2px;
   }
   h2 {
-    color: var(--button-primary);
+    color: var(--green-primary);
     background: -webkit-linear-gradient(
       62deg,
-      var(--button-primary) 0%,
+      var(--green-primary) 0%,
       rgba(253, 187, 45, 0.8) 100%
     );
     background-clip: text;

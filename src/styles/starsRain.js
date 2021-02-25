@@ -34,8 +34,8 @@ export const Star = styled.span`
   position: absolute;
   transform-origin: left top;
   border-radius: 50%;
-  background: rgba(0, 191, 166, 0.2);
-  box-shadow: 0px 0px 26px var(--button-primary);
+  background: var(--green-secondary);
+  box-shadow: 0px 0px 26px var(--green-primary);
   animation: ${starsAnimation} 6s ease-in-out infinite;
   span {
     left: -25%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  background: rgba(119, 127, 129, 0.4);
+  background: #404344;
   position: absolute;
   z-index: 98;
   width: 100%;

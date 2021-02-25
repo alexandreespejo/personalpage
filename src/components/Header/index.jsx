@@ -22,7 +22,7 @@ const Header = () => {
         fontSize={'36px'}
         zIndex={99}
         active={true}
-        color={'var(--button-primary)'}
+        color={'var(--green-primary)'}
         invert={isShowMenu}
         isArrow={true}
         position={'absolute'}

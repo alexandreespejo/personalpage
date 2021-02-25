@@ -20,7 +20,7 @@ export const Container = styled.button`
   cursor: pointer;
   border: none;
   border-bottom: ${(props) =>
-    props.isSelected && '2px solid var(--button-primary)'};
+    props.isSelected && '2px solid var(--green-primary)'};
   border-radius: ${(props) => (props.radius ? props.radius : 'none')};
   outline: none;
   transition: transform 0.2s linear;
@@ -28,7 +28,7 @@ export const Container = styled.button`
   :hover {
     border-bottom: ${(props) =>
       props.isSelected
-        ? '2px solid var(--button-primary)'
+        ? '2px solid var(--green-primary)'
         : props.isOption && '2px solid var(--text-secondary)'};
   }
   :active {
