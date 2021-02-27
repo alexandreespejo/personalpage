@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=auto height=auto src=".github/page.gif" alt="Project logo"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Personal Page</h3>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+<a href="https://www.linkedin.com/in/alexandre-espejo/">
+      <img alt="linkedin" src="https://img.shields.io/badge/-Alexandre Espejo-153a35?style=flat&logo=Linkedin&logoColor=white" />
+</a>
 
-### `yarn start`
+![GitHub last commit](https://img.shields.io/github/last-commit/alexandreespejo/personalpage?color=%23153a35)
+![Lines of code](https://img.shields.io/tokei/lines/github/alexandreespejo/personalpage?color=%23153a35)
+![GitHub Repo stars](https://img.shields.io/github/stars/alexandreespejo/personalpage?color=%23153a35)
+![APM](https://img.shields.io/apm/l/vim-mode?color=%23153a35)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+<p align="center">A personal portfolio based on game design
+    <br> 
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Table of Contents
 
-### `yarn build`
+- [About](#about)
+- [Built Using](#built_using)
+- [Acknowledgments](#acknowledgement)
+- [Getting Started](#getting_started)
+- [Authors](#authors)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💬 About <a name = "about"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A few days ago I had created a portfolio, but the design was not pleasing to me so I decided to create this with a style based on role playing games
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Built Using <a name = "built_using"></a>
 
-### `yarn eject`
+- [Node.js](https://nodejs.org/en/)
+- [React.js](https://reactjs.org/docs/getting-started.html)
+- [Styled-components](https://styled-components.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🎯 Acknowledgements <a name = "acknowledgement"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Animations
+- Grid layout
+- Responsive website
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+These instructions will get you a copy of the project up and running on your local machine.
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+What things you need to run the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
 
-### Code Splitting
+### Installing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+#Clone the project for your machine
+$ git clone https://github.com/alexandreespejo/personalpage.git
+```
 
-### Analyzing the Bundle Size
+```
+#Install the project dependencies.
+$ yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+#Run the project.
+$ yarn start
+```
 
-### Making a Progressive Web App
+## 🖌 Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [@alexandreespejo](https://github.com/alexandreespejo) - Idea & Initial work
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you liked the project !
